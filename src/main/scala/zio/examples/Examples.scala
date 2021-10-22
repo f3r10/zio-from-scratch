@@ -25,4 +25,21 @@ object succeedNow extends ZIOApp {
 
 }
 
+object succeedNowUhOh extends ZIOApp {
+  val howdyZIO = 
+    ZIO.succeedNow(println("Howdy"))
+
+  def run = ZIO.succeedNow(1)
+
+}
+
+object succeed extends ZIOApp {
+
+  // on the contrary that the previous example, println is lazy evaluated
+  val howdyZIO = 
+    ZIO.succeed(println("Howdy!"))
+
+  def run = ZIO.succeedNow(1)
+}
+
 
